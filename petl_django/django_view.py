@@ -39,7 +39,7 @@ class DjangoView(Table):
 
 def _iter_django_model(model, queryset, fields, *args, **kwargs):
     if fields is None:
-        column_names = _get_model_column_names(model)
+        column_names = _get_model_field_names(model)
     else:
         column_names = fields
     yield column_names
